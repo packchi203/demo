@@ -5,13 +5,14 @@ include "class/category_class.php"
 ?>
 <?php
 $category = new category;
- $show_cattegory = $category->show_category();
+ $show_category = $category->show_category();
 
 
 
 
 ?>
-
+<link rel="stylesheet" href="size.css">
+    <script src="script.js"></script>
 <div class="admin-content-right">
 <div class="admin-content-right-category-list">
                 <h1>Danh sách danh mục</h1>
@@ -23,8 +24,8 @@ $category = new category;
                         <th>Tùy biến</th>
                     </tr>
                     <?php
-                    if($show_cattegory){$i=0;
-                        while($result = $show_cattegory->fetch_assoc()) {$i++;
+                    if($show_category){$i=0;
+                        while($result = $show_category->fetch_assoc()) {$i++;
                     ?>
                     <tr>
                         <td><?php echo $i; ?></td>
